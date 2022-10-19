@@ -7,30 +7,39 @@
     <title>Registration Form</title>
 </head>
 <body>
-    <form method="POST" action="user_data.php">
-        <label for="name">
-            Name: <input type="text" name="name">
-        </label> <br>
-        <label for="email">
-            Email: <input type="email" name="email">
-        </label><br>
-        <label for="email">
-            Date of Birth: <input type="DOB" name="DOB">
-        </label><br>
-        <label for="email">
-            Gender: <input type="text" name="gender">
-        </label><br>
-        <label for="email">
-            Country: <input type="text" name="country">
-        </label><br>
-
-        <button type="submit">Submit</button>
+    <h1>Registration Form</h1>
+    <br>
+    <form action="user_data.php" method="post">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <br>
+        <br> 
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="email" required>
+        <br>
+        <br> 
+        <label for="dob">Date of Birth:</label>
+        <br>
+        <input type="date" name="dob" id="dob" placeholder="Date of Birth" required>
+        <br>
+        <br> 
+        <label for="gender">Gender:</label>
+        <br>
+        <select name="gender" id="gender" required>
+            <option value="">-select-</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select>
+        <br>
+        <br> 
+        <label for="Country">Country:</label>
+        <br>
+        <input type="text" name="country" id="country" placeholder="Country" required>
+        <br>
+        <br>
+        <button type="submit" name="btnRegister" id="btnRegister">Submit</button>
     </form>
-
-    <?php
-    // print_r($_GET['name']);
-    print_r($_POST);
-
-    ?>
 </body>
 </html>
